@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f8f8;
+}
+@media (min-width: 576px) {
+  body {
+    align-items: flex-end;
+  }
+}
+
+.folder-container {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 5vw;
+}
+@media (min-width: 576px) {
+  .folder-container {
+    margin-bottom: 3.5vw;
+  }
+}
+@media (min-width: 768px) {
+  .folder-container {
+    margin-bottom: 7vw;
+  }
+}
+@media (min-width: 1000px) {
+  .folder-container {
+    margin-bottom: 1vw;
+  }
+}
+
+.folder {
+  width: 70vw;
+  height: 40vw;
+  border-radius: 0 5px 5px 5px;
+  display: block;
+  background-color: #fee8a0;
+  position: relative;
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+.folder::before {
+  content: " ";
+  width: 17.5vw;
+  height: 6.6666666667vw;
+  border-radius: 5px 10px 0 0;
+  display: block;
+  background-color: #fee8a0;
+  position: absolute;
+  bottom: 40vw;
+  left: 0;
+}
+@media (min-width: 576px) {
+  .folder::before {
+    border-radius: 5px 15px 0 0;
+  }
+}
+@media (min-width: 1240px) {
+  .folder::before {
+    width: 250px;
+    height: 100px;
+    bottom: 490px;
+  }
+}
+
+.folder::after {
+  content: " ";
+  width: 69vw;
+  height: 40vw;
+  max-width: 990px;
+  max-height: 500px;
+  border-radius: 0 5px 5px 5px;
+  display: block;
+  background-color: #f4d26e;
+  transform: skewX(-20deg);
+  right: -7.5vw;
+  position: absolute;
+  z-index: -1;
+}
+@media (min-width: 1240px) {
+  .folder::after {
+    right: -7.3vw;
+  }
+}
+@media (min-width: 1300px) {
+  .folder::after {
+    right: -6.9vw;
+  }
+}
+@media (min-width: 1440px) {
+  .folder::after {
+    left: 100px;
+  }
+}
+
+.paper {
+  position: absolute;
+  background-color: red;
+  width: 64vw;
+  height: 40vw;
+  max-width: 900px;
+  max-height: 490px;
+  left: 8vw;
+  transition: transform 600ms ease;
+  margin-bottom: 17.6666666667vw;
+}
+@media (min-width: 1240px) {
+  .paper {
+    margin-bottom: 200px;
+  }
+}
+
+.paper:hover {
+  transform: translate(0, -6vw);
+}
+
+/*# sourceMappingURL=index.css.map */
